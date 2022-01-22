@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+
+
+<html lang="fr" class="no-js">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>Cron Courier</title>
+    <!-- ================= whatsaap ================== -->
+
+
+    <meta name="description" content="The description should optimally be between 150-160 characters.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Madeon08">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"
+        integrity="sha512-ZfFfcp0ll1jVjeG5e7uPH1hwUyeoBUVAb3xRJpqBsH90jVegaYKv5nGOhGnUYxZg/kbYpl6EWVGvmWrbV32L9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-retina-ipad.png">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-retina-iphone.png">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-standard-ipad.png">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon-standard-iphone.png">
+
+    <!-- ============== Resources style ============== -->
+    <link rel="stylesheet" href="css/style-fullscreen-light.css" />
+
+    <!-- Modernizr runs quickly on page load to detect features -->
+    <script src="js/modernizr.custom.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V33TY4MFEW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V33TY4MFEW');
+    </script>
+</head>
+
+<body>
+
+    <!-- LOADING -->
+    <div id="loading">
+        <div class="loader">
+            <div class="loader__row">
+                <div class="loader__arrow up inner inner-6"></div>
+                <div class="loader__arrow down inner inner-5"></div>
+                <div class="loader__arrow up inner inner-4"></div>
+            </div>
+            <div class="loader__row">
+                <div class="loader__arrow down inner inner-1"></div>
+                <div class="loader__arrow up inner inner-2"></div>
+                <div class="loader__arrow down inner inner-3"></div>
+            </div>
+        </div>
+        <span>CRON IS LOADING</span>
+    </div>
+    <!-- Menu icon for opening/closing the menu -->
+    <button class="open-close-menu" id="menu-access">
+        <ion-icon name="menu" class="animated-quick icon_to_act icon_menu"></ion-icon>
+        <ion-icon name="close" class="animated-quick display-none icon_to_act icon_close"></ion-icon>
+    </button>
+    <!-- START - FULLPAGE -->
+    <div id="fullpage">
+
+        <!-- TOOL 1 SECTION -->
+        <div class="section active" id="section0">
+
+            <img src="img/favicon.jpg" class="brand-logo" alt="Cron" />
+
+            <div class="section-name">
+                <h3></h3>
+            </div>
+            <center>
+                <div class="inside-split-text">
+
+                    <h2>The Cron Tools</h2>
+                    <p class="subtitle">Ογκομέτρηση Αποστολής</p>
+                </div>
+
+
+                <form id="contact-form" name="calculator">
+                    <div style="color: #6d6d6d;">
+                        Μήκος: <strong><input
+                                style="height: 30px; width:20%; color: black; margin-top: 5px; text-align: center;"
+                                type="text" id="firstNumber" /></strong> εκ/cm<br><br>
+                    </div>
+                    <div style="color: #6d6d6d;">
+                        Πλάτος: <strong><input
+                                style="height: 30px; width:20%; color: black; margin-top: 5px; text-align: center;"
+                                type="text" id="secondNumber" /></strong> εκ/cm <text style="color: #ffffff;">
+                            .</text><br><br>
+                    </div>
+                    <div style="color: #6d6d6d;">
+                        Ύψος: <strong><input
+                                style="height: 30px; width:20%; color: black; margin-top: 5px; text-align: center;"
+                                type="text" id="thirdNumber" /></strong> εκ/cm<br><br>
+                    </div>
+                    <div style=" ">
+                        <input
+                            style="height: 30px; width:20%; background-color: #B30C1F; border: 0px; font-family: Raleway, Helvetica Neue, sans-serif, Verdana; color: white; border-color: black;"
+                            type="button" onClick="multiplyBy()" Value="Υπολογισμός" />
+                    </div>
+                </form>
+                <br>
+                <div style="color: #6d6d6d;">
+                    <p style="size: 40px;">Το βάρος της αποστολής σας είναι
+                        <strong><span style="size: 50px;" id="result"> ? </span></strong> κιλά
+                    </p>
+                    <p style="size: 40px;">
+                        <strong><span style="size: 50px;" id="tool1cat"> </span></strong>
+                    </p>
+
+                </div>
+            </center>
+            
+            
+        </div>
+        <!-- TOOL 2 SECTION -->
+        <div class="section" id="section1">
+
+            <img src="img/favicon.jpg" class="brand-logo" alt="Cron" />
+
+            <div class="section-name">
+                <h3></h3>
+            </div>
+            <center>
+                <div class="inside-split-text">
+
+                    <h2>The Cron Tools</h2>
+                    <p class="subtitle">Zone Search Tool</p>
+                </div>
+                <div style="margin-top:3rem">
+                    <div style="color: #6d6d6d;">
+                        ZIPCODE: <strong><input
+                                style="height: 30px; width:20%; color: black; margin-top: 5px; text-align: center;"
+                                type="text" id="zipcode" /></strong> <span style="visibility: hidden">εκ/cmm</span><br><br>
+                    </div>
+                    
+                    <div style=" ">
+                        <input
+                            style="height: 30px; width:20%; background-color: #B30C1F; border: 0px; font-family: Raleway, Helvetica Neue, sans-serif, Verdana; color: white; border-color: black;"
+                            type="button" id="myBtn" onClick="playersearch()" Value="Search" />
+                    </div>
+                </div>
+
+                
+                <br>
+                <div style="color: #6d6d6d;">
+                    <p style="size: 40px;" id="mydiv"></p>
+
+                </div>
+            </center>
+            
+            
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Social Media -->
+    <div class="social-nav social-footer">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/CronWorld/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+
+            <li>
+                <a href="https://twitter.com/cronworld" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+
+            <li>
+                <a href="https://www.youtube.com/channel/UCHfUolkgSWGv-xMe3LVONJA" target="_blank"><i
+                        class="fa fa-youtube"></i></a>
+            </li>
+
+            <li>
+                <a href="https://www.cron.gr/tools" target="_self"><i class="fa fa-wrench"></i></a>
+            </li>
+
+
+            <li>
+                <a href="https://live.cron.gr" target="_blank"><i class="fa fa-user"></i></a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+
+    <!-- Fullpage plugin -->
+    <script src="js/jquery.fullpage.js"></script>
+
+    <!-- Contact form plugin -->
+    <script src="js/contact-me.js"></script>
+
+    <!-- Gallery plugin -->
+    <script src="js/jquery.swipebox.js"></script>
+
+    <!-- Newsletter plugin -->
+    <script src="js/notifyMe.js"></script>
+
+    <!-- Countdown plugin -->
+    <script src="js/jquery.countdown.js"></script>
+
+    <!-- Main JS File -->
+    <script src="js/main-fullscreen.js"></script>
+    <!-- whatsaap 
+        <a href="https://api.whatsapp.com/send?      phone=000005&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>-->
+
+</body>
+
+</html>
+<script type="text/javascript">
+    function multiplyBy() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        num3 = document.getElementById("secondNumber").value;
+        tool1result = num1 * num2 * num3 / 5000;
+        document.getElementById("result").innerHTML = tool1result;
+        if(tool1result>=0 && tool1result<=3.2){
+            document.getElementById("tool1cat").innerHTML = "Small Pack";
+        }else if(tool1result>=3.3 && tool1result<=13.2){
+            document.getElementById("tool1cat").innerHTML = "Medium Pack";
+        }else{
+            document.getElementById("tool1cat").innerHTML = "Large Pack";
+        }
+    }
+    var inputs = document.getElementById("zipcode");
+inputs.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+var url = "zones.xls";
+var sheetdata;
+var oReq = new XMLHttpRequest();
+oReq.open("GET", url, true);
+oReq.responseType = "arraybuffer";
+oReq.onload = function (e) {
+  var arraybuffer = oReq.response;
+  var data = new Uint8Array(arraybuffer);
+  var arr = new Array();
+  for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+  var bstr = arr.join("");
+  var result;
+  var workbook = XLSX.read(bstr, { type: "binary" });
+  var first_sheet_name = workbook.SheetNames[0];
+  var worksheet = workbook.Sheets[first_sheet_name];
+  sheetdata = XLSX.utils.sheet_to_json(worksheet, { raw: true });
+  console.log(sheetdata);
+  function searchzone(nameKey, myArray){
+    for (var i = 0; i < myArray.length; i++) {
+        if (myArray[i].zipcode == nameKey) {
+            return "Searched zone is " + "<b>" + sheetdata[i].zone + "</b>";
+        }
+      }
+      return "Not Found";
+}
+  playersearch = function () {
+    var input = document.getElementById("zipcode");
+    var needle = input.value;
+    // for (var i = 0; i < sheetdata.length; i++) {
+    //   if (sheetdata[i].zipcode == needle) {
+    //     console.log(sheetdata[i].zone);
+    //     result = "Searched zone is " + "<b>" + sheetdata[i].zone + "</b>";
+
+    //   }
+    // }
+
+    // document.getElementById("mydiv").innerHTML = result;
+    document.getElementById("mydiv").innerHTML = searchzone(needle,sheetdata);
+
+  };
+  
+};
+
+oReq.send();
+</script>
